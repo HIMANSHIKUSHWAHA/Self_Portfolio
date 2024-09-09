@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Tech from './components/Tech';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Navbar />
       <div className='container mx-auto px-8'></div>
       <Hero />
+      <Tech />
     </div>
   );
 };
