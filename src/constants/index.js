@@ -9,34 +9,34 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "May, 2024 - July, 2024",
+    role: "Software Developer Intern",
+    company: "40 Hammocks, USA",
+    description: `
+    Developed a data-driven web & mobile application using Flutter with advanced search algorithms using APIs and real-time data synchronization with Firebase.\n
+    Gathered and analyzed over 10,000 user reviews on vacation spots, optimizing data processing to highlight company hotel suggestions, leading to a boost in user engagement by 15%.`,
+    technologies: ["Javascript", "React.js", "Next.js", "MongoDB", "Firebase", "APIs", "Flutter"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "Jan, 2023 - June, 2023",
+    role: "Software Developer Intern",
+    company: "Visteon Corporation, India",
+    description: `
+    Crafted “Trippin” Android application, using Figma for advanced UI/UX design and Flutter for Android development, resulting in a 30% faster deployment time.\n
+    Integrated Google Maps API for tracking, group chats, personalized themes, and SOS features. Optimized with data analytics, enhancing user engagement and functionality.`,
+    technologies: ["Figma", "Flutter", "Google Maps API", "Data Analytics", "Firebase"],
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+    year: "Oct, 2021 - Mar, 2022",
+    role: "Machine Learning Intern",
+    company: "Canspirit AI, India",
+    description: `
+    Engineered a Facial Recognition system with Haar Cascade, LBPH algorithms, & Tkinter GUI, achieving 15% better accuracy.\n
+    Integrated Flask-based Email authentication, & Docker for efficient deployment, enhanced by advanced analytics for improved performance.`,
+    technologies: ["Python", "Haar Cascade", "LBPH", "Tkinter", "Flask", "Docker", "Analytics"],
+  }
 ];
+
 
 export const PROJECTS = [
   {
