@@ -11,15 +11,15 @@ const Navbar = () => {
             <div className="m-8 flex items-center justify-center gap-4 text-2xl">
                 {/* LinkedIn */}
                 <a href="https://www.linkedin.com/in/himanshikushwaha/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin />
+                    <FaLinkedin style={{ color: '#0A66C2' }} /> {/* LinkedIn color */}
                 </a>
                 {/* GitHub */}
                 <a href="https://github.com/HIMANSHIKUSHWAHA" target="_blank" rel="noopener noreferrer">
-                    <FaGithub />
+                    <FaGithub style={{ color: '#171515' }} /> {/* GitHub color */}
                 </a>
                 {/* LeetCode */}
                 <a href="https://leetcode.com/u/HIMANSHIKUSHWAHA/" target="_blank" rel="noopener noreferrer">
-                    <SiLeetcode />
+                    <SiLeetcode style={{ color: '#FFA116' }} /> {/* LeetCode color */}
                 </a>
             </div>
         </nav>
