@@ -9,7 +9,6 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://himanshikushwaha.github.io/Self_Portfolio",
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
