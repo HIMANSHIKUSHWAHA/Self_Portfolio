@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <div className="border-b border-neutral-900 pb-20">
-      <h1 className="my-10 text-center text-4xl">Get in Touch</h1>
+      <h1 className="my-8 text-center text-5xl">GET IN TOUCH</h1>
       <form className="mx-auto max-w-lg text-center" onSubmit={handleSubmit}>
         <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2"> {/* Updated grid layout */}
           <input
