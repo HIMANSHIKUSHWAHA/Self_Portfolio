@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
+import project5 from "../assets/projects/project-5.jpg";
 
 export const HERO_CONTENT = `I firmly believe in the philosophy that "With determination and effort, any dream can be achieved." This mindset drives me to continuously learn new technologies and tackle complex, real-world problems. Currently pursuing my Master’s in Computer Science at Indiana University, I am eager to join an innovative organization where I can apply my technical, analytical, and problem-solving skills. Passionate about creating meaningful, user-centered solutions, I thrive on challenges that push me to think critically and creatively, and I am committed to contributing to impactful projects that advance the industry and deliver exceptional results.`;
 
@@ -40,32 +41,39 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "WALMART SALES DATA ANALYSIS",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
+      "Utilized SQL & Pandas for ETL processes, performing data cleaning, handling missing values, & feature engineering with economic indicators like CPI & unemployment. Conducted EDA to identify patterns, followed by building & tuning a scikit-learn regression model for weekly sales prediction, leveraging key features such as holiday data & markdowns for accurate forecasting.",
+    technologies: ["Pandas", "ETL", "Feature Engineering", "EDA", "Imputation Techniques", "Data Visualization"],
   },
   {
-    title: "Task Management App",
+    title: "REAL TIME SOCIAL SENTIMENT ANALYSIS",
     image: project2,
     description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
+      "Developed a real-time sentiment analysis tool using Python & Dash, enabling live Twitter data streaming and sentiment analysis to understand public opinion effectively. Managed backend operations with Flask, utilized SQLite for database handling, enhanced data retrieval speeds with caching, and deployed the application using Gunicorn for robust server management.",
+    technologies: ["Python", "Dash", "Flask", "SQLite", "Twitter API", "Gunicorn"],
   },
   {
-    title: "Portfolio Website",
+    title: "HR ANALYTICS",
     image: project3,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+      "Designed & implemented a comprehensive HR Analytics dashboard in Tableau, leveraging Kafka for real-time data streaming & SQL for backend analysis. Analyzed key metrics like attrition and job satisfaction using data blending, custom calculations, and parameter controls to provide actionable insights for HR strategy.",
+    technologies: ["Tableau", "Kafka", "SQL", "Data Blending"],
   },
   {
-    title: "Blogging Platform",
+    title: "SELF PORTFOLIO",
     image: project4,
     description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+      "Developed a dynamic self-portfolio website to showcase my technical and creative skills, utilizing HTML, Tailwind CSS, JavaScript, ReactJS, and Framer Motion. This combination enabled the creation of a fluid, interactive user experience with sophisticated animations, reflecting my proficiency in modern web development practices and responsive design.",
+    technologies: ["HTML", "Tailwind CSS", "Javascript", "EmailJS", "Framer Motion", "ReactJS"],
+  },
+  {
+    title: "WELLNESS MANAGEMENT SYSTEM",
+    image: project5,
+    description:
+      "I developed an interactive Wellness Management System using HTML, CSS, JavaScript, ReactJS, NodeJS, and MongoDB. This platform features a dashboard offering descriptive and predictive analytics, along with a collaborative filtering mechanism for personalized workout recommendations and an NLP-based search for enhanced user navigation and interaction.",
+    technologies: ["HTML", "CSS", "Javascript", "ReactJS", "NodeJS", "MongoDB"],
   },
 ];
 

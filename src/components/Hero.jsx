@@ -20,7 +20,7 @@ const container = (delay, direction = "left") => ({
 });
 
 const Hero = () => {
-  const jobRoles = ["Software Developer", "Analyst", "Pythonist", "Curious Mind", "Passionate Programmer"];
+  const jobRoles = ["Software Developer", "Analyst", "Python Developer", "Curious Mind", "Passionate Programmer"];
   const [prefix, setPrefix] = useState('A'); 
 
   const handleTypingChange = (text) => {

@@ -1,106 +1,69 @@
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer"; // Import the hook
+import { useInView } from "react-intersection-observer";
 
-// Variants for Framer Motion
-const bounceInVariant = {
-  hidden: { y: -50, opacity: 0 },
-  visible: {
+const fadeInUpVariant = {
+  hidden: { y: 20, opacity: 0 },
+  visible: (custom) => ({
     y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
-      stiffness: 120,
-      duration: 1.2,  // Adjust for a slower bounce effect
+      delay: custom * 0.1, // Delay based on the index
+      duration: 0.5,
+      ease: "easeInOut",
     },
-  },
+  }),
 };
 
-const slideInFromLeftVariant = (delay = 0) => ({
-  hidden: { x: -100, opacity: 0 }, // Negative x for coming from left
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1.5, // Increased duration for slower animation
-      delay: delay,
-      ease: "easeInOut", // Smooth easing
-    },
-  },
-});
-
-const slideInFromRightVariant = (delay = 0) => ({
-  hidden: { x: 100, opacity: 0 }, // Positive x for coming from right
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1.5, // Increased duration for slower animation
-      delay: delay,
-      ease: "easeInOut", // Smooth easing
-    },
-  },
-});
-
 const Projects = () => {
-  const { ref: sectionRef, inView: isInView } = useInView({ triggerOnce: true, threshold: 0.1 }); // Setting threshold for visibility
+  const { ref: sectionRef, inView: isInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  });
 
   return (
-    <div ref={sectionRef} className='border-neutral-900 pb-4'>
-      {/* Bouncing Projects Title */}
+    <div ref={sectionRef} className="container mx-auto p-4">
       <motion.h1
-        className='my-8 text-center text-5xl'
-        variants={bounceInVariant}
+        className="my-8 text-center text-5xl"
+        variants={fadeInUpVariant}
         initial="hidden"
-        animate={isInView ? "visible" : "hidden"}  // Animation triggers on scrolling into view
+        animate={isInView ? "visible" : "hidden"}
+        custom={0}
       >
         PROJECTS
       </motion.h1>
 
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {PROJECTS.map((project, index) => (
-          <div key={index} className='mb-8 flex flex-wrap lg:wrap lg:justify-center'>
-            {/* Image sliding from left */}
-            <motion.div
-              className='w-full lg:w-1/4'
-              variants={slideInFromLeftVariant(0.3)}  // Slight delay for the image
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}  // Animation happens when in view
-            >
-              <img 
-                src={project.image}
-                width={150}
-                height={150}
-                alt={project.title}
-                className='mb-6 rounded'
-              />
-            </motion.div>
-
-            {/* Project content and technologies sliding from right */}
-            <motion.div
-              className='w-full max-w-xl lg:w-3/4'
-              variants={slideInFromRightVariant(0.5)}  // Slide content from right with delay
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}  // Animation happens when in view
-            >
-              <h6 className='mb-2 font-semibold uppercase'>
+          <motion.div
+            key={index}
+            className="shadow-lg rounded-lg overflow-hidden"
+            variants={fadeInUpVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={index}
+          >
+            <img 
+              src={project.image}
+              alt={project.title}
+              className="w-full h-64 object-cover rounded-t-lg"
+            />
+            <div className="p-4">
+              <h5 className="text-xl font-semibold mb-2">
                 {project.title}
-              </h6>
-              <p className='mb-4 text-neutral-400'>
-                {project.description}
-              </p>
-              <div>
-                {project.technologies.map((tech, index) => (
-                  <span 
-                    key={index}
-                    className='mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900'
-                  >
+              </h5>
+              <div className="flex flex-wrap mb-4">
+                {project.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="mr-2 mb-2 bg-purple-200 text-purple-900 px-2 py-1 rounded text-sm">
                     {tech}
                   </span>
                 ))}
               </div>
-            </motion.div>
-          </div>
+              <p className="text-white-700">
+                {project.description}
+              </p>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>
