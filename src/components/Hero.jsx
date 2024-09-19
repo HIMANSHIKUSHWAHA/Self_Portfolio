@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TypingEffect from 'react-typing-effect';
 import { HERO_CONTENT } from '../constants'; 
-import profilePic from '../assets/kevinRushProfile.jpg';
+import profilePic from '../assets/IMG_7271.jpeg';
 import { motion } from "framer-motion";
 
 const container = (delay, direction = "left") => ({
